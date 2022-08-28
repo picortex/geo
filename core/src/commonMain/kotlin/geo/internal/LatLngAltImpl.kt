@@ -6,4 +6,6 @@ internal data class LatLngAltImpl(
     override val lat: Double,
     override val lng: Double,
     override val alt: Double
-) : LatLngAlt
+) : LatLngAlt {
+    override fun toString(): String = "($lat, $lng, $alt)"
+}

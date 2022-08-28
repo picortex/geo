@@ -14,7 +14,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(kotlinx.serialization.json)
+                api(kotlinx.serialization.core)
                 api(asoft.viewmodel.core)
                 api(asoft.koncurrent.later.core)
                 api(asoft.identifier.core)
@@ -25,6 +25,7 @@ kotlin {
 
         val commonTest by getting {
             dependencies {
+                implementation(kotlinx.serialization.json)
                 implementation(asoft.expect.coroutines)
                 implementation(asoft.koncurrent.later.coroutines)
                 implementation(asoft.live.test)
