@@ -12,7 +12,7 @@ import kotlin.js.JsExport
 data class GeoLocation(
     val lines: List<String>,
     val country: String,
-    val coords: LatLng? = null,
+    val cords: LatLng? = null,
     val code: String? = null
 ) {
     val address get() = lines.joinToString(", ")

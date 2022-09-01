@@ -3,6 +3,7 @@ plugins {
     kotlin("plugin.serialization")
     id("tz.co.asoft.library")
     id("org.jetbrains.dokka")
+//    id("geo.languages.generate")
 }
 
 val tmp = 2
