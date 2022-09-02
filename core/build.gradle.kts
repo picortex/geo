@@ -14,6 +14,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                api(projects.geoCountries)
                 api(kotlinx.serialization.core)
                 api(asoft.kotlinx.collections.interoperable)
             }

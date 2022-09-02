@@ -11,7 +11,7 @@ import kotlin.js.JsExport
 @Serializable
 data class GeoLocation(
     val lines: List<String>,
-    val country: String,
+    val country: Country,
     val cords: LatLng? = null,
     val code: String? = null
 ) {
