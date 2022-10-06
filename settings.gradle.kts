@@ -43,10 +43,10 @@ val tmp = 2
 
 rootProject.name = "asoft"
 
-includeBuild("./kash-generator")
+includeBuild("../kash/kash-generator")
 // dependencies
 includeSubs("functions", "../functions", "core")
-includeSubs("expect", "../expect", "core")
+includeSubs("expect", "../expect", "core", "coroutines")
 includeSubs("formatter", "../formatter", "core")
 
 includeSubs("kash", "../kash", "currency", "money")
