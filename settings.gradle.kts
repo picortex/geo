@@ -41,7 +41,15 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
 
 val tmp = 2
 
-rootProject.name = "picortex"
+rootProject.name = "asoft"
+
+includeBuild("./kash-generator")
+// dependencies
+includeSubs("functions", "../functions", "core")
+includeSubs("expect", "../expect", "core")
+includeSubs("formatter", "../formatter", "core")
+
+includeSubs("kash", "../kash", "currency", "money")
 
 includeBuild("./geo-generator")
 includeSubs("geo", ".", "core", "languages", "countries")

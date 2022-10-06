@@ -25,8 +25,8 @@ kotlin {
         val commonMain by getting {
             kotlin.srcDir(generateCountries.outputDir)
             dependencies {
+                api(projects.kashCurrency)
                 api(kotlinx.serialization.core)
-                api(asoft.kash.currency)
                 api(asoft.kotlinx.collections.interoperable)
             }
         }
