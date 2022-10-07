@@ -6,6 +6,7 @@ plugins {
     id("tz.co.asoft.library")
     id("org.jetbrains.dokka")
     id("countries-generator")
+    signing
 }
 
 val tmp = 2
