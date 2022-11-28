@@ -17,7 +17,7 @@ kotlin {
             dependencies {
                 api(projects.geoCountries)
                 api(kotlinx.serialization.core)
-                api(asoft.kotlinx.collections.interoperable)
+                api(projects.kollectionsInteroperable)
             }
         }
 

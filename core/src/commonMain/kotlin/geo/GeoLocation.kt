@@ -2,7 +2,7 @@
 
 package geo
 
-import kotlinx.collections.interoperable.List
+import kollections.List
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 
