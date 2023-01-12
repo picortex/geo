@@ -28,7 +28,6 @@ kotlin {
             dependencies {
                 api(projects.kashCurrency)
                 api(kotlinx.serialization.core)
-                api(asoft.kotlinx.collections.interoperable)
             }
         }
 
