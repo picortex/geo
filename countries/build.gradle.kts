@@ -9,7 +9,9 @@ plugins {
     signing
 }
 
-val tmp = 2
+repositories {
+    publicRepos()
+}
 
 val generateCountries by tasks.getting(GenerateCountriesTask::class)
 
