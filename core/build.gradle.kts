@@ -20,7 +20,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(libs.geo.countries)
+                api(projects.geoCountries)
                 api(kotlinx.serialization.core)
                 api(libs.kollections.interoperable)
             }
