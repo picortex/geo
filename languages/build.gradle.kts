@@ -7,8 +7,6 @@ plugins {
 //    id("geo.languages.generate")
 }
 
-val tmp = 2
-
 kotlin {
     jvm { library() }
     js(IR) { library() }
@@ -17,7 +15,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(kotlinx.serialization.core)
-                api(asoft.kotlinx.collections.interoperable)
+                api(libs.kollections.interoperable)
             }
         }
 

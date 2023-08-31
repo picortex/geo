@@ -29,7 +29,7 @@ kotlin {
         val commonMain by getting {
             kotlin.srcDir(generateCountries.outputDir)
             dependencies {
-                api(projects.kashCurrency)
+                api(libs.kash.currency)
                 api(kotlinx.serialization.core)
             }
         }

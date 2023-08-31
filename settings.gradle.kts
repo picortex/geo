@@ -1,35 +1,9 @@
 pluginManagement {
-    enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-    dependencyResolutionManagement {
-        versionCatalogs {
-            file("gradle/versions").listFiles().map {
-                it.nameWithoutExtension to it.absolutePath
-            }.forEach { (name, path) ->
-                create(name) { from(files(path)) }
-            }
-        }
-    }
-    repositories {
-        mavenCentral()
-        google()
-        gradlePluginPortal()
-        maven {
-            name = "piCortex"
-            url = uri("http://65.21.254.230:1050/repository/internal/")
-            isAllowInsecureProtocol = true
-            credentials {
-                username = "admin"
-                password = "admin@123"
-            }
-        }
-        mavenLocal()
-    }
-
+    includeBuild("../build-logic")
 }
 
-fun includeRoot(name: String, path: String) {
-    include(":$name")
-    project(":$name").projectDir = File(path)
+plugins {
+    id("multimodule")
 }
 
 fun includeSubs(base: String, path: String = base, vararg subs: String) {
@@ -39,17 +13,9 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
     }
 }
 
-val tmp = 2
+includeBuild("../kash")
+includeBuild("./build-logic")
 
-rootProject.name = "asoft"
+rootProject.name = "geo"
 
-includeBuild("../kash/kash-generator")
-// dependencies
-includeSubs("functions", "../functions", "core")
-includeSubs("expect", "../expect", "core", "coroutines")
-includeSubs("formatter", "../formatter", "core")
-
-includeSubs("kash", "../kash", "currency", "money")
-
-includeBuild("./geo-generator")
 includeSubs("geo", ".", "core", "languages", "countries")
