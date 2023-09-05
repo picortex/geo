@@ -1,4 +1,3 @@
-import expect.expect
 import geo.LatLng
 import geo.serializers.LatLngSerializer
 import kommander.expect
