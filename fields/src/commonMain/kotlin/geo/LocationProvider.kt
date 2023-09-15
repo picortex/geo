@@ -1,4 +1,4 @@
-package symphony
+package geo
 
 import geo.GeoLocation
 

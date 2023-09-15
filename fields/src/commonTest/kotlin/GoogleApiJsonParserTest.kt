@@ -1,6 +1,6 @@
 import geo.Country
 import kommander.expect
-import symphony.internal.GooglePlacesApiParser
+import geo.internal.GooglePlacesApiParser
 import kotlin.test.Test
 
 class GoogleApiJsonParserTest {

@@ -1,8 +1,10 @@
-package symphony
+package geo
 
-import geo.GeoLocation
 import neat.ValidationFactory
-import symphony.internal.LocationFieldImpl
+import symphony.Changer
+import symphony.Fields
+import symphony.Visibility
+import geo.internal.LocationFieldImpl
 import kotlin.reflect.KMutableProperty0
 
 fun Fields<*>.location(

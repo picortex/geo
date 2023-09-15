@@ -1,9 +1,8 @@
-package symphony.internal
+package geo.internal
 
 import geo.Country
 import geo.GeoLocation
 import kollections.toIList
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
 class GooglePlacesApiParser {

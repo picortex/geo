@@ -1,9 +1,9 @@
 @file:JsExport
 
-package symphony
+package geo
 
 import kollections.JsExport
-import symphony.internal.GooglePlacesApiParser
+import geo.internal.GooglePlacesApiParser
 
 object GoogleLocationProvider : LocationProvider {
     override val name = "Google"

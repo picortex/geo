@@ -1,4 +1,4 @@
-package symphony.internal
+package geo.internal
 
 import geo.LatLng
 import kotlinx.serialization.Serializable

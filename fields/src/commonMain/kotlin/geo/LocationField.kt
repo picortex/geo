@@ -1,9 +1,9 @@
 @file:JsExport
 @file:Suppress("NON_EXPORTABLE_TYPE")
 
-package symphony
+package geo
 
-import geo.GeoLocation
+import symphony.TransformingField
 import kotlin.js.JsExport
 
 interface LocationField : TransformingField<String, GeoLocation> {
