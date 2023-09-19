@@ -20,6 +20,8 @@ kotlin {
             dependencies {
                 api(projects.geoCore)
                 api(libs.symphony.input.core)
+                api(libs.symphony.input.choice)
+                api(libs.symphony.input.text)
                 api(kotlinx.serialization.json)
             }
         }
