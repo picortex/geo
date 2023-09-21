@@ -4,6 +4,7 @@
 package geo
 
 import kollections.List
+import kollections.toIList
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 
@@ -11,4 +12,7 @@ import kotlin.js.JsExport
 data class AddressDto(
     val country: Country,
     val entries: List<Entry>
-)
+) {
+
+    fun toLines(): List<String> = (entries.reversed().mapNotNull { it.value } + country.label).toIList()
+}
