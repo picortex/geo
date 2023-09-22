@@ -14,5 +14,5 @@ data class AddressDto(
     val entries: List<Entry>
 ) {
 
-    fun toLines(): List<String> = (entries.reversed().mapNotNull { it.value } + country.label).toIList()
+    fun toLines(): List<String> = (entries.reversed().map { it.value ?: "" } + country.label).toIList()
 }
