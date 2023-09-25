@@ -26,7 +26,7 @@ class AddressManager {
         Country.GB -> listOf(post.town, post.code, street.name)
         Country.TZ -> listOf(region, district, ward, street.orVillage, plot.number, house.number, box)
         Country.US -> listOf(street.name, house.number, apartmentOrSuiteOrRoom.number, zip.code)
-        Country.ZA -> listOf(street.address, building, suburb, province, city, postal.code)
+        Country.ZA -> listOf(building,street.address, suburb, city, province, postal.code)
         else -> listOf(street.name, house.number, apartmentOrSuiteOrRoom.number, zip.code)
     }
 
@@ -47,9 +47,9 @@ class AddressManager {
         }
 
         class Street : Numbered("Street") {
-            val address = "Address"
-            val name = "Street Name"
-            val orVillage = "Street or Village"
+            val address = "$base Address"
+            val name = "$base Name"
+            val orVillage = "$base or Village"
         }
 
         val street by lazy { Street() }
